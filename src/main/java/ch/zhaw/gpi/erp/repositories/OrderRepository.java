@@ -8,5 +8,5 @@ import ch.zhaw.gpi.erp.entities.Order;
 
 public interface OrderRepository extends JpaRepository<Order, Long> {
     
-    //public Optional<Order> findByReferenceNr(Long referenceNr);
+    public Optional<Order> findByReferenceNr(Long referenceNr);
 }
