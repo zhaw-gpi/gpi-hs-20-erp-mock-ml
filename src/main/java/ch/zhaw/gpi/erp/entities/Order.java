@@ -14,7 +14,6 @@ public class Order {
     private String costCenterMgr;
     private Long referenceNr;
     @OneToOne(cascade = CascadeType.ALL)
-    //@JoinColumn(name = "invoice_nr", referencedColumnName = "invoice_nr")
     private Invoice invoice;
     @ManyToOne
     private Creditor creditor;
@@ -57,6 +56,14 @@ public class Order {
 
     public void setCreditor(Creditor creditor) {
         this.creditor = creditor;
+    }
+
+    public Invoice getInvoice() {
+        return invoice;
+    }
+
+    public void setInvoice(Invoice invoice) {
+        this.invoice = invoice;
     }
 
     
