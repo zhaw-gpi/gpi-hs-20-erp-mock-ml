@@ -12,24 +12,16 @@ import javax.persistence.TemporalType;
 @Entity
 public class Invoice {
     @Id
-    private Long invoiceNr;
+    private Long invoiceId;
     private Long invoiceAmount;
     @Temporal(TemporalType.DATE)
-    private Date invoiceDate;
+    private Date dateOfInvoice;
     @Temporal(TemporalType.DATE)
-    private Date dueDate;
+    private Date dateDue;
     @OneToOne(mappedBy = "invoice")
     private Order order;
     @ManyToOne
     private Creditor creditor;
-
-    public Long getInvoiceNr() {
-        return invoiceNr;
-    }
-
-    public void setInvoiceNr(Long invoiceNr) {
-        this.invoiceNr = invoiceNr;
-    }
 
     public Long getInvoiceAmount() {
         return invoiceAmount;
@@ -37,22 +29,6 @@ public class Invoice {
 
     public void setInvoiceAmount(Long invoiceAmount) {
         this.invoiceAmount = invoiceAmount;
-    }
-
-    public Date getInvoiceDate() {
-        return invoiceDate;
-    }
-
-    public void setInvoiceDate(Date invoiceDate) {
-        this.invoiceDate = invoiceDate;
-    }
-
-    public Date getDueDate() {
-        return dueDate;
-    }
-
-    public void setDueDate(Date dueDate) {
-        this.dueDate = dueDate;
     }
 
     public Order getOrder() {
@@ -69,6 +45,30 @@ public class Invoice {
 
     public void setCreditor(Creditor creditor) {
         this.creditor = creditor;
+    }
+
+    public Long getInvoiceId() {
+        return invoiceId;
+    }
+
+    public void setInvoiceId(Long invoiceId) {
+        this.invoiceId = invoiceId;
+    }
+
+    public Date getDateOfInvoice() {
+        return dateOfInvoice;
+    }
+
+    public void setDateOfInvoice(Date dateOfInvoice) {
+        this.dateOfInvoice = dateOfInvoice;
+    }
+
+    public Date getDateDue() {
+        return dateDue;
+    }
+
+    public void setDateDue(Date dateDue) {
+        this.dateDue = dateDue;
     }
 
     

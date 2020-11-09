@@ -8,5 +8,5 @@ import ch.zhaw.gpi.erp.entities.Creditor;
 
 public interface CreditorRepository extends JpaRepository<Creditor, Long> {
     
-    public Optional<Creditor> findByCreditorName(String creditorName);
+    public Optional<Creditor> findByCrName(String crName);
 }

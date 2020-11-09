@@ -8,9 +8,9 @@ import javax.persistence.Id;
 public class Creditor {
     @Id
     private Long creditorId;
-    private String creditorName;
-    private Integer creditorOrderCount;
-    private Integer creditorInvoiceReclamationCount;
+    private String crName;
+    private Integer ordersCnt;
+    private Integer invoicingReclamationCnt;
 
     public Long getCreditorId() {
         return creditorId;
@@ -20,27 +20,29 @@ public class Creditor {
         this.creditorId = creditorId;
     }
 
-    public String getCreditorName() {
-        return creditorName;
+    public String getCrName() {
+        return crName;
     }
 
-    public void setCreditorName(String creditorName) {
-        this.creditorName = creditorName;
+    public void setCrName(String crName) {
+        this.crName = crName;
     }
 
-    public Integer getCreditorOrderCount() {
-        return creditorOrderCount;
+    public Integer getOrdersCnt() {
+        return ordersCnt;
     }
 
-    public void setCreditorOrderCount(Integer creditorOrderCount) {
-        this.creditorOrderCount = creditorOrderCount;
+    public void setOrdersCnt(Integer ordersCnt) {
+        this.ordersCnt = ordersCnt;
     }
 
-    public Integer getCreditorInvoiceReclamationCount() {
-        return creditorInvoiceReclamationCount;
+    public Integer getInvoicingReclamationCnt() {
+        return invoicingReclamationCnt;
     }
 
-    public void setCreditorInvoiceReclamationCount(Integer creditorInvoiceReclamationCount) {
-        this.creditorInvoiceReclamationCount = creditorInvoiceReclamationCount;
-    }    
+    public void setInvoicingReclamationCnt(Integer invoicingReclamationCnt) {
+        this.invoicingReclamationCnt = invoicingReclamationCnt;
+    }
+
+    
 }
